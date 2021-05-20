@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 
 corsProxy
 	.createServer({
-		originWhitelist: ["http://localhost:3000", "https://api.twitter.com/2/tweets/search/recent"],
+		originWhitelist: ["http://localhost:3000", "https://api.twitter.com/1.1/search/tweets.json"],
 		requireHeader: ["origin", "x-requested-with"],
 		removeHeaders: ["cookie", "cookie2"],
 	})
